@@ -1,3 +1,9 @@
+# simple script to illustrate git concepts
+# Scenario: A team is trying out different parameters for KNN
+#      Some may push for a very different value of neighbours
+#      DS Office has defined a minimum accuracy for the model
+#      The unit test would enforce this
+#      Unit test in pytest enviroment is executed as a git workflow
 
 
 import pandas as pd
@@ -20,13 +26,14 @@ data = df.values
 X = data[:, 0:4]
 y = data[:, 4]
 
-
+# parameter search for neigbours - manual
+neighb = 4
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Create a K-Nearest Neighbors (KNN) classifier
-knn = KNeighborsClassifier(n_neighbors=3)
+knn = KNeighborsClassifier(n_neighbors=neighb)
 
 # Train the model on the training data
 knn.fit(X_train, y_train)
@@ -36,14 +43,10 @@ y_pred = knn.predict(X_test)
 
 # Evaluate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
-print(f"Model Accuracy: {accuracy:.2f}")
-
+print(f"\n\nModel Accuracy: {accuracy:.2f}")
 
 #now save the model
 knnPickle = open('knnpickle_file', 'wb') 
-      
-# source, destination 
 pickle.dump(knn, knnPickle)  
-
-# close the file
 knnPickle.close()
+print("\n\n\n           Done\n")
