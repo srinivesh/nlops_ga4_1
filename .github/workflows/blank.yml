@@ -26,6 +26,6 @@ jobs:
           echo "\`\`\`" >> report.md
           cat pytest_output.txt >> report.md
           echo "\`\`\`" > report.md
-          echo "metrics from training" >> report.md
+          echo "metrics from testing" >> report.md
           cat test_output.txt >> report.md
           cml comment create --publish report.md
