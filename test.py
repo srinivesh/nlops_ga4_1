@@ -44,7 +44,7 @@ class TestModel(unittest.TestCase):
         
         #create some output 
         with open('test_output.txt', 'w') as f:
-            msg = "Model Accuracy: %.2f" %(accuracy)
+            msg = "\n\nUnit Test\n      Model Accuracy: %.2f" %(accuracy)
             f.write(msg)
             f.write("\n")
             print(msg)
