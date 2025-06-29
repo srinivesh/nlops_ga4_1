@@ -27,7 +27,7 @@ X = data[:, 0:4]
 y = data[:, 4]
 
 # parameter search for neigbours - manual
-neighb = 4
+neighb = 3
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
