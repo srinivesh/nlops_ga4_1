@@ -48,7 +48,6 @@ class TestModel(unittest.TestCase):
             f.write(msg)
             f.write("\n")
             print(msg)
-       # self.assertEqual(prediction,"dog","Predicted class is wrong")
 
 
 if __name__ == '__main__':
