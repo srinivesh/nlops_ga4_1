@@ -43,7 +43,7 @@ y_pred = knn.predict(X_test)
 
 # Evaluate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
-print(f"\n\nModel Accuracy: {accuracy:.2f}")
+print(f"\n\nIn Training Run - Model Accuracy: {accuracy:.2f}")
 
 #now save the model
 knnPickle = open('knnpickle_file', 'wb') 
