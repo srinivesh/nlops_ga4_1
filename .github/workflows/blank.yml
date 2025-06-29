@@ -1,6 +1,7 @@
 name: CML_GA4
 on:
   workflow_dispatch:
+  push:
 permissions:
   contents: write
   pull-requests: write
