@@ -1,4 +1,4 @@
-name: CML_GA4
+name: CML_GA4_disabled
 on:
   workflow_dispatch:
   push:
